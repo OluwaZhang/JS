@@ -223,50 +223,50 @@ console.log("if statement with dave gray")
 
 //conditional if statements
 
-let customerIsBanned = false;
-let soup = "chicken noodle soup";
-let crackers = false
-let reply;
+// let customerIsBanned = false;
+// let soup = "chicken noodle soup";
+// let crackers = false
+// let reply;
 
-if(customerIsBanned){
-    reply = "no soup for you";
-}
-else if (soup && crackers){
-    reply = `Here's your order of ${soup} and crackers`;
-}else if (soup){
-    reply = `Here's your order of ${soup}`;
-} else{
-    reply = `sorry we are out of soup.`;
-}
-console.log(reply)
+// if(customerIsBanned){
+//     reply = "no soup for you";
+// }
+// else if (soup && crackers){
+//     reply = `Here's your order of ${soup} and crackers`;
+// }else if (soup){
+//     reply = `Here's your order of ${soup}`;
+// } else{
+//     reply = `sorry we are out of soup.`;
+// }
+// console.log(reply)
  
 //the or der of the command should be very important.. and well arranged to give out the right results
 
 // new example
-let testScore = 10;
-let collegeStudent = false;
-let grade;
+// let testScore = 10;
+// let collegeStudent = false;
+// let grade;
 
-if (testScore >= 90) {
-    grade = "A"
-}
-else if (testScore >= 80){
-    grade = "B"
-}
-else if (testScore>=70){
-    grade = "C"
-}
-else if(testScore>=60){
-    grade = `D`
-}else {
-    if (collegeStudent){
-        grade = "U"
-    } else {
-        grade = "F"
-    }
-}
+// if (testScore >= 90) {
+//     grade = "A"
+// }
+// else if (testScore >= 80){
+//     grade = "B"
+// }
+// else if (testScore>=70){
+//     grade = "C"
+// }
+// else if(testScore>=60){
+//     grade = `D`
+// }else {
+//     if (collegeStudent){
+//         grade = "U"
+//     } else {
+//         grade = "F"
+//     }
+// }
 
-console.log( grade)
+// console.log( grade)
     
 //rock papaer scissors game
 //decision tree
@@ -300,36 +300,145 @@ console.log( grade)
 
 // alert( "dont forget to finish your rock papaer scissors code")
 
-alert("rock paper scissors game made to 50%")
+// alert("rock paper scissors game made to 50%")
 
-alert("welcome to the game")
-var playerOne = prompt ("player one")
-var playerTwo = prompt ("player two")
+// alert("welcome to the game")
+// var playerOne = prompt ("player one")
+// var playerTwo = prompt ("player two")
 
- if(playerOne === playerTwo){
-    alert("its a tie")
-}
-else if (playerOne === "rock"){
-    if( playerTwo === "paper"){
-            alert("playerTwo wins")
-    } else{
-        alert("playerOne wins")
-    }   
-}
-else if (playerOne === "paper"){
-    if( playerTwo === "scissors"){
-        alert("playerTwo wins")
-    } else{
-        alert("playerOne wins")
-    }   
-}
-else if (playerOne === "scissors"){
-    if( playerTwo=== "rock"){
-        alert("playerTwo wins")
-    } else{
-        alert("playerOne wins")
-    }   
-} else{
-    alert("no result")
+//  if(playerOne === playerTwo){
+//     alert("its a tie")
+// }
+// else if (playerOne === "rock"){
+//     if( playerTwo === "paper"){
+//             alert("playerTwo wins")
+//     } else{
+//         alert("playerOne wins")
+//     }   
+// }
+// else if (playerOne === "paper"){
+//     if( playerTwo === "scissors"){
+//         alert("playerTwo wins")
+//     } else{
+//         alert("playerOne wins")
+//     }   
+// }
+// else if (playerOne === "scissors"){
+//     if( playerTwo=== "rock"){
+//         alert("playerTwo wins")
+//     } else{
+//         alert("playerOne wins")
+//     }   
+// } else{
+//     alert("no result")
+// }
+
+//switch atatements
+//sintax
+// switch (expression OR value){
+//     case choice1:
+//         //run this code
+//     break;
+
+//     case choice2:
+//         //run this code
+//         break;
+
+//     //as many case as possible
+
+//     default:
+//         //run this code
+//         //no break needed here
+// }
+
+//swith statements need strict matches to function properly
+
+// switch("1"){
+//     case 1:
+//         console.log (1)
+//         break;
+//     case 2:
+//         console.log("fire")
+//         break;
+//      case 3:
+//          console.log("go away")
+//          break;
+//      default:
+//          console.log("the end")
+// }
+
+
+//another expression in generating random numbers
+switch(Math.floor(Math.random() *3 + 1)){
+    case 1:
+        console.log (1)
+        break;
+    case 2:
+        console.log("fire")
+        break;
+     case 3:
+         console.log("go away")
+         break;
+     default:
+         console.log("the end")
 }
 
+//applying switch statement to rock paper scissors
+// let playerOne = "scissors";
+// let playerTwo = "rock";
+
+// switch(playerOne){
+//     case playerTwo:
+//         console.log("its a tie")
+//         break;
+//     case "rock":
+//         if (playerTwo === "paper"){
+//             console.log("player two wins");
+//         }else{
+//             console.log("player one wins")
+//         }
+//         break;
+//     case "paper":
+//         if (playerTwo === "scissors"){
+//             console.log("player two wins");
+//         }else{
+//             console.log("player one wins")
+//         }
+//         break;  
+//     default:
+//         if (playerTwo === "rock"){
+//             console.log("player two wins");
+//         }else{
+//             console.log("player one wins")
+//         }
+// }
+
+//tenary operator 
+//syntax
+//condition ? ifTrue : ifFalse;
+
+let soup = "chicken noodle soup";
+// let response = soup ? "yes we have soup" : "sorry no soup today";
+// console.log(response)
+let isCustomerBanned = false;
+let soupAccess = isCustomerBanned ? "sorry no soup for you" : soup ? `yes we have ${soup}` : "sorry we are out of soup"
+console.log(soupAccess) //as seen here tenary operator can be linked together
+
+//trying it on test scores
+let testScore = 79;
+let myGrade = testScore > 89 ?"A" 
+: testScore > 79 ? "B" 
+: testScore > 69 ? "C" 
+: testScore >59 ? "D" 
+: "F"
+console.log(`my test results are ${myGrade}`)
+
+let playerOne = "scissors";
+let playerTwo = "paper";
+let results = playerOne === playerTwo ? "ita a tie!" 
+: playerOne === "rock" && playerTwo === "paper" ? "player two wins" 
+: playerOne === "paper" && playerTwo === "scissors" ? "pplayer two wins" 
+: playerOne === "scissors" && playerTwo === "rock" ? "player two wins"
+: "player one wins";
+
+console.log(results)
