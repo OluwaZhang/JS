@@ -504,10 +504,6 @@ if(playGame){
     }else{
         alert("please make up your mind, i have better things to do")
     }
-    let playAgain = confirm("you wanna go again?");
-         playAgain ? location.reload(): alert("okay go back to what you were doing")
 }else{
     alert("thank you very much, go and find work")
 }
-let playAgain = confirm("are you sure?");
-         playAgain ? location.reload(): alert("okay go back to what you were doing")
