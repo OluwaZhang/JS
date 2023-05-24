@@ -369,76 +369,141 @@ console.log("if statement with dave gray")
 
 
 //another expression in generating random numbers
-switch(Math.floor(Math.random() *3 + 1)){
-    case 1:
-        console.log (1)
-        break;
-    case 2:
-        console.log("fire")
-        break;
-     case 3:
-         console.log("go away")
-         break;
-     default:
-         console.log("the end")
-}
-
-//applying switch statement to rock paper scissors
-// let playerOne = "scissors";
-// let playerTwo = "rock";
-
-// switch(playerOne){
-//     case playerTwo:
-//         console.log("its a tie")
+// switch(Math.floor(Math.random() *3 + 1)){
+//     case 1:
+//         console.log (1)
 //         break;
-//     case "rock":
-//         if (playerTwo === "paper"){
-//             console.log("player two wins");
-//         }else{
-//             console.log("player one wins")
-//         }
+//     case 2:
+//         console.log("fire")
 //         break;
-//     case "paper":
-//         if (playerTwo === "scissors"){
-//             console.log("player two wins");
-//         }else{
-//             console.log("player one wins")
-//         }
-//         break;  
-//     default:
-//         if (playerTwo === "rock"){
-//             console.log("player two wins");
-//         }else{
-//             console.log("player one wins")
-//         }
+//      case 3:
+//          console.log("go away")
+//          break;
+//      default:
+//          console.log("the end")
 // }
 
-//tenary operator 
-//syntax
-//condition ? ifTrue : ifFalse;
+// //applying switch statement to rock paper scissors
+// // let playerOne = "scissors";
+// // let playerTwo = "rock";
 
-let soup = "chicken noodle soup";
-// let response = soup ? "yes we have soup" : "sorry no soup today";
-// console.log(response)
-let isCustomerBanned = false;
-let soupAccess = isCustomerBanned ? "sorry no soup for you" : soup ? `yes we have ${soup}` : "sorry we are out of soup"
-console.log(soupAccess) //as seen here tenary operator can be linked together
+// // switch(playerOne){
+// //     case playerTwo:
+// //         console.log("its a tie")
+// //         break;
+// //     case "rock":
+// //         if (playerTwo === "paper"){
+// //             console.log("player two wins");
+// //         }else{
+// //             console.log("player one wins")
+// //         }
+// //         break;
+// //     case "paper":
+// //         if (playerTwo === "scissors"){
+// //             console.log("player two wins");
+// //         }else{
+// //             console.log("player one wins")
+// //         }
+// //         break;  
+// //     default:
+// //         if (playerTwo === "rock"){
+// //             console.log("player two wins");
+// //         }else{
+// //             console.log("player one wins")
+// //         }
+// // }
 
-//trying it on test scores
-let testScore = 79;
-let myGrade = testScore > 89 ?"A" 
-: testScore > 79 ? "B" 
-: testScore > 69 ? "C" 
-: testScore >59 ? "D" 
-: "F"
-console.log(`my test results are ${myGrade}`)
+// //tenary operator 
+// //syntax
+// //condition ? ifTrue : ifFalse;
 
-let playerOne = "scissors";
-let playerTwo = "paper";
-let results = playerOne === playerTwo ? "ita a tie!" 
-: playerOne === "rock" && playerTwo === "paper" ? "player two wins" 
-: playerOne === "paper" && playerTwo === "scissors" ? "pplayer two wins" 
-: playerOne === "scissors" && playerTwo === "rock" ? "player two wins"
-: "player one wins";
+// let soup = "chicken noodle soup";
+// // let response = soup ? "yes we have soup" : "sorry no soup today";
+// // console.log(response)
+// let isCustomerBanned = false;
+// let soupAccess = isCustomerBanned ? "sorry no soup for you" : soup ? `yes we have ${soup}` : "sorry we are out of soup"
+// console.log(soupAccess) //as seen here tenary operator can be linked together
 
-console.log(results)
+// //trying it on test scores
+// let testScore = 79;
+// let myGrade = testScore > 89 ?"A" 
+// : testScore > 79 ? "B" 
+// : testScore > 69 ? "C" 
+// : testScore >59 ? "D" 
+// : "F"
+// console.log(`my test results are ${myGrade}`)
+
+// let playerOne = "rock";
+// let playerTwo = "rock";
+// let results = playerOne === playerTwo ? "ita a tie!" 
+// : playerOne === "rock" && playerTwo === "paper" ? "player two wins" 
+// : playerOne === "paper" && playerTwo === "scissors" ? "pplayer two wins" 
+// : playerOne === "scissors" && playerTwo === "rock" ? "player two wins"
+// : "player one wins";
+
+// console.log(results)
+
+//starting input interphase
+
+// let myBoolean = confirm("okay === true\ncancel === false")
+// console.log (myBoolean);
+// let name = prompt("please enter your name")
+// console.log (name ??  alert ("you are an idiot"));
+// console.log (typeof name)
+// if (name){
+//     console.log(name ??  alert ("you are an idiot"))
+// } else{
+//     console.log( "you didnt enter your name")
+// }
+
+//dealing with white space
+
+// let name = prompt("whats your name")
+// if(name){
+//     console.log(name.length)
+//     console.log(name.trim().length)
+//     console.log(name.trim())
+//     console.log(name.length);
+// } else{
+//     console.log("you are an idiot")
+// }
+
+// first interactive game player vs computer
+
+let playGame =  confirm("do you want to play rock, paper scissors or should i come and be going")
+
+if(playGame){
+    //game code
+    let playerChoice = prompt("rock,paper or scissors?.")
+    if (playerChoice){
+        let playerOne = playerChoice.trim().toLowerCase();
+        if (playerOne === "rock" || playerOne === "paper" ||playerOne === "scissors" ){
+            let computerChoice = Math.floor(Math.random() * 3 + 1);
+            let computer = computerChoice === 1 ? "rock" 
+            : computerChoice === 2 ? "paper" 
+            : "scissors"
+
+            let results = 
+            playerOne === computer 
+            ? "its a tie!!":
+            playerOne === "rock" && computer === "paper"
+            ? `player one : ${playerOne}\ncomputer : ${computer} \ncomputer wins!! \n HaHa! I win!!`:
+            playerOne === "paper" && computer === "scissors"
+            ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!`:
+            playerOne === "scissors" && computer === "rock" 
+            ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!!`:
+            `player one : ${playerOne}\ncomputer : ${computer}\n player one wins... \n You win... dang it!!`;
+         alert(results)
+
+         let playAgain = confirm("you wanna go again?");
+         playAgain ? location.reload(): alert("okay go back to what you were doing")
+
+        } else{
+            alert("sir or madam.... i have things to do na, the options are rock, paper or scissors")
+        }
+    }else{
+        alert("please make up your mind, i have better things to do")
+    }
+}else{
+    alert("thank you very much, go and find work")
+}
