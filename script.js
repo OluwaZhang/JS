@@ -551,7 +551,7 @@ console.log("if statement with dave gray")
 // }
 
 // we go again
-let gamePlay = confirm("lets play rock paper and scissors")
+let gamePlay = confirm("do you want to play rock, paper scissors or should i come and be going")
 if(gamePlay){
     //play
     while(gamePlay){
