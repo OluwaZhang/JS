@@ -574,18 +574,18 @@ if(gamePlay){
                 `player one : ${playerOne}\ncomputer : ${computer}\n player one wins... \n You win... dang it!!`;
                 alert(results)
                 gamePlay = confirm("would you like to play again")
-                if(!gamePlay) alert("thanks for playing")
+                if(!gamePlay) alert("thanks for playing, alainikanse")
                 continue;
 
             }else{
-                alert("you did not select rock, paper or scissors")
+                alert("Sir or madam.... I have things to do na, the options are rock, paper or scissors")
                 continue;
             }
         }else{
-            alert("i guess you changed your mind")
+            alert("please make up your mind, I have better things to do")
             break;
         }
     }
 }else{
-    alert("thank you very much, have a great day")
+    alert("Thank you very much, go and find work")
 }
