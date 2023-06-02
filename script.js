@@ -470,40 +470,122 @@ console.log("if statement with dave gray")
 
 // first interactive game player vs computer
 
-let playGame =  confirm("do you want to play rock, paper scissors or should i come and be going")
+// let playGame =  confirm("do you want to play rock, paper scissors or should i come and be going")
 
-if(playGame){
-    //game code
-    let playerChoice = prompt("rock,paper or scissors?.")
-    if (playerChoice){
-        let playerOne = playerChoice.trim().toLowerCase();
-        if (playerOne === "rock" || playerOne === "paper" ||playerOne === "scissors" ){
-            let computerChoice = Math.floor(Math.random() * 3 + 1);
-            let computer = computerChoice === 1 ? "rock" 
-            : computerChoice === 2 ? "paper" 
-            : "scissors"
+// if(playGame){
+//     //game code
+//     let playerChoice = prompt("rock,paper or scissors?.")
+//     if (playerChoice){
+//         let playerOne = playerChoice.trim().toLowerCase();
+//         if (playerOne === "rock" || playerOne === "paper" ||playerOne === "scissors" ){
+//             let computerChoice = Math.floor(Math.random() * 3 + 1);
+//             let computer = computerChoice === 1 ? "rock" 
+//             : computerChoice === 2 ? "paper" 
+//             : "scissors"
+ 
+//             let results = 
+        //     playerOne === computer 
+        //     ? `player one : ${playerOne}\n computer : ${computer} \n its a tie!`:
+        //     playerOne === "rock" && computer === "paper"
+        //     ? `player one : ${playerOne}\ncomputer : ${computer} \ncomputer wins!! \n HaHa! I win!!`:
+        //     playerOne === "paper" && computer === "scissors"
+        //     ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!`:
+        //     playerOne === "scissors" && computer === "rock" 
+        //     ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!!`:
+        //     `player one : ${playerOne}\ncomputer : ${computer}\n player one wins... \n You win... dang it!!`;
+        //  alert(results)
 
-            let results = 
-            playerOne === computer 
-            ? "its a tie!!":
-            playerOne === "rock" && computer === "paper"
-            ? `player one : ${playerOne}\ncomputer : ${computer} \ncomputer wins!! \n HaHa! I win!!`:
-            playerOne === "paper" && computer === "scissors"
-            ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!`:
-            playerOne === "scissors" && computer === "rock" 
-            ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!!`:
-            `player one : ${playerOne}\ncomputer : ${computer}\n player one wins... \n You win... dang it!!`;
-         alert(results)
+//          let playAgain = confirm("you wanna go again?");
+//          playAgain ? location.reload(): alert("okay go back to what you were doing")
 
-         let playAgain = confirm("you wanna go again?");
-         playAgain ? location.reload(): alert("okay go back to what you were doing")
+//         } else{
+//             alert("sir or madam.... i have things to do na, the options are rock, paper or scissors")
+//         }
+//     }else{
+//         alert("please make up your mind, i have better things to do")
+//     }
+// }else{
+//     alert("thank you very much, go and find work")
+// }
 
-        } else{
-            alert("sir or madam.... i have things to do na, the options are rock, paper or scissors")
+//game refactoring using a while loop
+
+// let gamePlay =  confirm("do you want to play rock, paper scissors or should i come and be going")
+// if (gamePlay) {
+//     while(gamePlay){
+//         const playerChoice = prompt("rock,paper or scissors?.")
+//         if (playerChoice){
+//             const playerOne = playerChoice.trim().toLowerCase()
+//             if (
+//                 playerOne === "rock" || "paper" || "scissors"
+//             ){
+//                 const computerChoice = Math.floor(Math.random() * 3)
+//                 const computerChoiceSet = ["rock", "paper", "scissors"]
+//                 const computer = computerChoiceSet[computerChoice]
+
+//                 const results = 
+                // playerOne === computer 
+                // ? `player one : ${playerOne}\n computer : ${computer} \n its a tie!`:
+                // playerOne === "rock" && computer === "paper"
+                // ? `player one : ${playerOne}\ncomputer : ${computer} \ncomputer wins!! \n HaHa! I win!!`:
+                // playerOne === "paper" && computer === "scissors"
+                // ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!`:
+                // playerOne === "scissors" && computer === "rock" 
+                // ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!!`:
+                // `player one : ${playerOne}\ncomputer : ${computer}\n player one wins... \n You win... dang it!!`;
+//              alert(results)
+//              gamePlay = confirm("you wanna go again?")
+//              if(!gamePlay) alert("okay go back to what you were doing")
+//              continue;
+//             }else{
+//                 alert("sir or madam.... i have things to do na, the options are rock, paper or scissors");
+//                 continue;
+//             }
+//         }else{
+//             alert("please make up your mind, i have better things to do")
+//             break;
+//         }
+//     } 
+// }else{
+//     alert("thank you very much, go and find work")
+// }
+
+// we go again
+let gamePlay = confirm("lets play rock paper and scissors")
+if(gamePlay){
+    //play
+    while(gamePlay){
+        const playerChoice = prompt("rock, paper or scissors")
+        if (playerChoice || playerChoice === ""){
+            const playerOne = playerChoice.trim().toLowerCase();
+            if(playerOne === "rock" || playerOne === "paper" || playerOne === "scissors"){
+                const computerChoice = Math.floor(Math.random() * 3)
+                const computerChoiceSet = ["rock", "paper", "scissors"]
+                const computer = computerChoiceSet[computerChoice]
+                const results =
+                playerOne === computer 
+                ? `player one : ${playerOne}\n computer : ${computer} \n its a tie!`:
+                playerOne === "rock" && computer === "paper"
+                ? `player one : ${playerOne}\ncomputer : ${computer} \ncomputer wins!! \n HaHa! I win!!`:
+                playerOne === "paper" && computer === "scissors"
+                ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!`:
+                playerOne === "scissors" && computer === "rock" 
+                ? `player one : ${playerOne}\ncomputer : ${computer}\n computer wins!! \n HaHa!! I win!!`:
+                `player one : ${playerOne}\ncomputer : ${computer}\n player one wins... \n You win... dang it!!`;
+                alert(results)
+                gamePlay = confirm("would you like to play again")
+                if(!gamePlay) alert("thanks for playing")
+                continue;
+
+            }else{
+                alert("you did not select rock, paper or scissors")
+                continue;
+            }
+        }else{
+            alert("i guess you changed your mind")
+            break;
         }
-    }else{
-        alert("please make up your mind, i have better things to do")
     }
 }else{
-    alert("thank you very much, go and find work")
+    alert("thank you very much, have a great day")
 }
